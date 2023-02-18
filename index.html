@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link rel="stylesheet" href="styleSheet/mobilr_style.css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" href="styleSheet/desktop_style.css" media="screen and (min-width:900px)">
+</head>
+<body>
+    <div class="grid_container">
+        <div class="header">
+            <div class="nav">
+                <ul>
+                    <li><a href="#top_left"><span class="highlight_color">01.</span> Home</a></li>
+                    <li><a href="#skill"><span class="highlight_color">02.</span> Skill</a></li>
+                    <li><a href="#project"><span class="highlight_color">03.</span> Project</a></li>
+                    <li><a href="#education"><span class="highlight_color">04.</span> Education</a></li>
+                    <li><a href="#about"><span class="highlight_color">05.</span> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="top_left" id="top_left">
+            <div class="my_sologan">
+                <p class="highlight_color" style="font-size:40px;">Mahmud Hasan</p>
+                <p style="font-size:30px;">I have <span class="highlight_color">programming </span>skills</p>
+                <p  >Hi ! , I am a <span class="highlight_color">programmer</span>. I have 4 years programming problem solving exprience</p>
+            </div>
+
+        </div>
+
+        <div class="top_right">
+            <div class="my_photo">
+                <img src="photos/Mahmud.png" alt="Girl in a jacket" style="border-radius: 100px;" height="250">
+            </div>
+        </div>
+        <div class="content">
+            <div id="skill">
+                <h3 class="content_Header highlight_color">Skill</h3>
+                <h4 class="content_item highlight_color2">Technical Skill</h4>
+                <div class="flex_container">
+                    <div class="div1">
+                        <b class="highlight_color2" style="font-size: 15px;">Frontend</b>
+                        <p>HTML, CSS, XML</p>
+                    </div>
+                    <div class="div2">
+                        <b class="highlight_color2" style="font-size: 15px;">Backend</b>
+                        <p>Python, PHP, Java, JavaScript, C</p>
+                    </div>
+                    <div class="div3">
+                        <b class="highlight_color2" style="font-size: 15px;">Wave Frameworks</b>
+                        <p>Django, Laravel</p>
+                    </div>
+                    <div class="div4">
+                        <b class="highlight_color2" style="font-size: 15px;">App Development </b>
+                        <p>Android (Java)</p>
+                    </div>
+                    <div class="div5">
+                        <b class="highlight_color2" style="font-size: 15px;">SQL Database</b>
+                        <p>MySQL, SqLite</p>
+                    </div>
+                    <div class="div5">
+                        <b class="highlight_color2" style="font-size: 15px;">No SQL Database</b>
+                        <p>MongoDB, Firebase</p>
+                    </div>
+        
+                </div>
+
+            </div>
+            <div id="project">
+                <h3 class="content_Header">Project</h3>
+               
+                <h4 class="content_item highlight_color2"># A Cluster-Based System for Discovering Similar Text Documents</h4>
+                <!-- <button class="show_Button"id="myButton">Show Details</button> -->
+                <p class="project_des" id="project_des1"> It’s a AI based web API, which able to find similar text data from a large
+                    number of records or text data collection. We used unsupervised learning
+                    technique to develop our AI model, also clustered data set to get searching
+                    efficiency. We also developed some demo websites bases on our API, which
+                    fetch data also able to show relevant data easily by using our API. In this
+                    project I learn data clustering, similar data searching, Including AI on
+                    Django application, also team work, analytical ability as soft skills</p>
+                    <br>
+                <h4 class="content_item highlight_color2"># Golden Crops</h4>
+                <!-- <button class="show_Button"id="myButton2">Show Details</button> -->
+                <p class="project_des" id="project_des2"> This project is about establishing a D to C business for farmers, which beaks 
+                    the monopoly of the middleman. Farmers will be able to sell their products 
+                    direct to consumers. This web app is developed on the Django framework. In 
+                    this project, I learned CRUD operation on Django also Django model with an 
+                    image field, Django form also team work, analytical ability as soft skills</p>
+
+
+            </div>
+            <div id="education">
+                <h3 class="content_Header">Education</h3>
+                <h3 class="highlight_color2">BSC in CSE (Computer Science & Engineering)</h3>
+                <p class="content_item">Institution <span class="highlight_color">=>></span> East West University, Bangladesh</p>
+                <p class="content_item">Department <span class="highlight_color">=>></span> Computer Science and Engineering</p>
+                <p class="content_item"class="content_item">Passing Year <span class="highlight_color">=>></span> 2022</p>
+
+            </div>
+            <br><br>
+            <div id="about">
+                <h3 class="content_Header">Contact</h3>
+                I am on <a target="_blank" href="https://www.facebook.com/profile.php?id=100008417866915" class="show_Button"id="myButton2">Facebook</a>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#myButton").click(function(){
+        $("#project_des1").toggle(500);
+ 
+    });
+    $("#myButton2").click(function(){
+        $("#project_des2").toggle(500);
+       
+    });
+});
+  // Smooth scrolling to anchor links
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+          scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
+
+  </script>
+
+</html>
